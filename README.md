@@ -1,2 +1,2 @@
 # AngularStore
-Simple login/display poroduct site
+Simple login/display product site
