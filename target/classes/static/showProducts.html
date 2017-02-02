@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>Product List</title>
+<link href="css/angular-bootstrap.css" rel="stylesheet">
+<style>
+th {
+  text-align: center;
+}
+td {
+  text-align: center;
+}
+</style>
+</head>
+
+<body ng-app="store">
+  <div class="container">
+    <h1>Product List</h1>
+    <div ng-controller="ShowProductsController" class="table-responsive">
+    <table class="table table-striped">
+	  <thead>
+	   <tr>
+	    <th>ID</th>
+	    <th>Description</th>
+	    <th>Price</th>
+	    <th>Image</th>
+	    </tr>
+	  </thead>	    
+      <tr ng-repeat='item in products'>
+			<td>{{item.productId}}</td>
+			<td>{{item.description}}</td>
+			<td>{{item.price | currency}}</td>
+			<td><img src={{item.imageURL}} alt={{item.description}} style="width:200px;height:120px;"></td>
+	  </tr>
+	</table>  
+    </div>
+  </div>
+  <script src="js/angular-bootstrap.js" type="text/javascript"></script>
+  <script src="js/store.js"></script>
+</body>
+</html>
